@@ -1,0 +1,61 @@
+package com.example.demo.pageDomain;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.DatabaseConnector;
+import com.example.demo.PageModel;
+import com.example.demo.pageDomein.entity.Frame;
+
+import lombok.Getter;
+import lombok.Setter;
+
+public class Page {
+	@Autowired
+	private DatabaseConnector databaseConnector;
+	
+	@Getter
+	@Setter
+	private PageModel page;
+	
+	public Page(String baseFrameId){
+		PageModel page = new PageModel();
+		try (Connection connection = databaseConnector.getConnection()) {
+
+			String query = "SELECT * FROM t_frame where frame_id = " + baseFrameId + "";
+
+			try (PreparedStatement statement = connection.prepareStatement(query)) {
+				try (ResultSet resultSet = statement.executeQuery()) {
+					while (resultSet.next()) {
+						Frame tFrame = new Frame();
+						tFrame.setFrameId(resultSet.getString("frame_id"));
+//						reply = resultSet.getString("content_id");
+//						reply = resultSet.getString("content_type");
+//						reply = resultSet.getString("body");
+						reply = resultSet.getString("frame_id");
+						System.out.println("body: " + reply);
+					}
+				}
+			}
+			try (PreparedStatement statement = connection.prepareStatement(query)) {
+				try (ResultSet resultSet = statement.executeQuery()) {
+					while (resultSet.next()) {
+//						reply = resultSet.getString("content_id");
+//						reply = resultSet.getString("content_type");
+//						reply = resultSet.getString("body");
+						reply = resultSet.getString("frame_id");
+						System.out.println("body: " + reply);
+					}
+				}
+			}
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+		}
+		this.page.getBaseFrame() = page;
+	}
+}

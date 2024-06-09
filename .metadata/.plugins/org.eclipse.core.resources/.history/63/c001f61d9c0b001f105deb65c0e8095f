@@ -1,0 +1,40 @@
+package com.example.demo.pageDomein.entity;
+
+import java.util.Date;
+
+import lombok.Getter;
+import lombok.Setter;
+
+public class Frame {
+
+	@Getter
+	@Setter
+	private String frameId;
+	@Getter
+	@Setter
+	private String baseFrameFlg;
+	@Getter
+	@Setter
+	private String frameType;
+	@Getter
+	@Setter
+	private String titleContentId;
+	@Getter
+	@Setter
+	private Date createdDate;
+	@Getter
+	@Setter
+	private Date updatedDate;
+
+	public Frame(String frameId, String baseFrameFlg, String frameType, String titleContentId,
+			Date createdDate, Date updatedDate) {
+		this.frameId = frameId;
+		this.baseFrameFlg = baseFrameFlg;
+		this.frameType = frameType;
+		this.titleContentId = titleContentId;
+		this.createdDate = createdDate;
+		this.updatedDate = updatedDate;
+	}
+
+	public List<String> col = List<String> ["frame_id", "base_flame_flg", "frame_type", "title_content_id", "created_date", "updated_date"]
+}

@@ -1,0 +1,10 @@
+package com.example.demo.factory;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.DatabaseConnector;
+
+public class Page {
+	@Autowired
+	private DatabaseConnector databaseConnector;
+}

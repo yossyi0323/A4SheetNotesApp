@@ -1,0 +1,54 @@
+package com.example.demo.pageDomain;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.DatabaseConnector;
+import com.example.demo.pageDomein.entity.Frame;
+
+import lombok.Getter;
+import lombok.Setter;
+
+public class Page {
+	
+	@Autowired
+	private DatabaseConnector databaseConnector;
+	
+	@Getter
+	@Setter
+	private PageModel page;
+	@Getter
+	@Setter
+	private Date createdDate;
+	public Page(String baseFrameId) {
+		this.setPage(this.pageFactory(baseFrameId));
+		this.setCreatedDate(this.getPage().getBaseFrame().getCreatedDate());
+	}
+	
+	public PageModel pageFactory(String baseFrameId){
+		PageModel page = new PageModel();
+		try (Connection connection = databaseConnector.getConnection()) {
+			// TODO 区分値に変える！
+			String getBaseFrameQuery = "SELECT * FROM t_frame where "+ 
+					"frame_id = " + baseFrameId + "and " +
+					"base_flame_flg = " + "1" +"";
+			try (PreparedStatement statement = connection.prepareStatement(getBaseFrameQuery)) {
+				try (ResultSet r = statement.executeQuery()) {
+					while (r.next()) {
+						Frame frame = new Frame();
+						this.page.setBaseFrame(frame.setResultSet(r));
+					}
+				}
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return this.page;
+	}
+}

@@ -1,0 +1,44 @@
+package com.example.demo.pageDomein.entity;
+
+import java.util.Date;
+
+import lombok.Getter;
+import lombok.Setter;
+
+////@Data
+//@Entity
+//@Table(name="t_frame")
+public class Frame {
+
+//    @Id
+//    @Column(name = "frame_id")
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Getter
+	@Setter
+	private String frameId;
+	@Getter
+	@Setter
+    private String baseFrameFlg;
+	@Getter
+	@Setter
+	private String frameType;
+	@Getter
+	@Setter
+	private String titleContentId;
+	@Getter
+	@Setter
+	private Date createdDate;
+	@Getter
+	@Setter
+	private Date updatedDate;
+
+    public Frame(String frameId, String baseFrameFlg, String frameType, String titleContentId,
+                  Date createdDate, Date updatedDate) {
+        this.frameId = frameId;
+        this.baseFrameFlg = baseFrameFlg;
+        this.frameType = frameType;
+        this.titleContentId = titleContentId;
+        this.createdDate = createdDate;
+        this.updatedDate = updatedDate;
+    }
+}

@@ -1,0 +1,62 @@
+package com.example.demo;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.example.demo.entity.Frame;
+
+import lombok.Getter;
+import lombok.Setter;
+
+/*
+ * 画面表示のベースとなるページオブジェクト。
+ * 1つのベースフレームとそれに紐づくFrameやContentsの集合体として定義される。
+ */
+public class PageModel {
+	@Getter
+	@Setter
+	private Frame baseFrame;
+	@Getter
+	@Setter
+	private List<Frame> childFrames;
+	
+	public PageModel() {
+//		this.baseFrame.getTitleContentId()
+		try (Connection connection = databaseConnector.getConnection()) {
+
+			String query = "SELECT * FROM t_frame";
+
+			try (PreparedStatement statement = connection.prepareStatement(query)) {
+				try (ResultSet resultSet = statement.executeQuery()) {
+					while (resultSet.next()) {
+						Frame tFrame = new Frame();
+						tFrame.setFrameId(resultSet.getString("frame_id"));
+//						reply = resultSet.getString("content_id");
+//						reply = resultSet.getString("content_type");
+//						reply = resultSet.getString("body");
+						reply = resultSet.getString("frame_id");
+						System.out.println("body: " + reply);
+					}
+				}
+			}
+			try (PreparedStatement statement = connection.prepareStatement(query)) {
+				try (ResultSet resultSet = statement.executeQuery()) {
+					while (resultSet.next()) {
+//						reply = resultSet.getString("content_id");
+//						reply = resultSet.getString("content_type");
+//						reply = resultSet.getString("body");
+						reply = resultSet.getString("frame_id");
+						System.out.println("body: " + reply);
+					}
+				}
+			}
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+		}
+	}
+}

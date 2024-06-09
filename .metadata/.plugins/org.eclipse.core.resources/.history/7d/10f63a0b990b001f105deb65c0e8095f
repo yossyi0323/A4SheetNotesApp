@@ -1,0 +1,15 @@
+package com.example.demo;
+
+import com.example.demo.entity.Frame;
+
+import lombok.Getter;
+import lombok.Setter;
+
+public class PageModel {
+	
+	@Getter
+	@Setter
+	private Frame baseFrame;
+	
+	
+}

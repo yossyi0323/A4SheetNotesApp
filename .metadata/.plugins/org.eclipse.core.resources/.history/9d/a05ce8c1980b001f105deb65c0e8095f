@@ -1,0 +1,12 @@
+package com.example.demo.model;
+
+import lombok.Setter;
+
+public class PageModel {
+	
+	@Getter
+	@Setter
+	private Frame baseFrame;
+	
+	
+}

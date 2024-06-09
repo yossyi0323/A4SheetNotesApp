@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import com.example.demo.entity.Frame;
+
+import lombok.Getter;
+import lombok.Setter;
+
+/*
+ * 画面表示のベースとなるページオブジェクト。
+ * 1つのベースフレームとそれに紐づくFrameやContentsの集合体として定義される。
+ */
+public class PageModel {
+	@Getter
+	@Setter
+	private Frame baseFrame;
+	private List<Frame> childFrames;
+	
+	public PageModel() {
+//		this.baseFrame.getTitleContentId()
+	}
+}

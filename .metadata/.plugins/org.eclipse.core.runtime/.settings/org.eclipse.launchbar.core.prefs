@@ -1,0 +1,10 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u30ED\u30FC\u30AB\u30EB/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u30ED\u30FC\u30AB\u30EB/name=\u30ED\u30FC\u30AB\u30EB
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u30ED\u30FC\u30AB\u30EB/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:MyNote1 - MyNote1Application,org.eclipse.launchbar.core.descriptorType.default\:MyNote2 - MyNote2Application,org.eclipse.launchbar.core.descriptorType.default\:testapp1-3 - Testapp13Application,org.eclipse.launchbar.core.descriptorType.default\:MyNoteApp-server - MyNoteAppApplication
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:MyNote1\ -\ MyNote1Application/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:MyNote1\ -\ MyNote1Application/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:\u30ED\u30FC\u30AB\u30EB
+org.eclipse.launchbar.core.descriptorType.default\:MyNote2\ -\ MyNote2Application/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:MyNoteApp-server\ -\ MyNoteAppApplication/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:MyNoteApp-server\ -\ MyNoteAppApplication/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:\u30ED\u30FC\u30AB\u30EB

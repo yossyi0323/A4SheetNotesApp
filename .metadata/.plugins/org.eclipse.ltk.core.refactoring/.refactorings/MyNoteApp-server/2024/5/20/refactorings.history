@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="メソッド名 &apos;com.example.demo.pageDomein.entity.Frame.getChildFrames()&apos; を &apos;fetchChildFramesfromDB&apos; に変更します&#x0D;&#x0A;- 元のプロジェクト: &apos;MyNoteApp-server&apos;&#x0D;&#x0A;- オリジナル要素: &apos;com.example.demo.pageDomein.entity.Frame.getChildFrames()&apos;&#x0D;&#x0A;- 名前変更済み要素: &apos;com.example.demo.pageDomein.entity.Frame.fetchChildFramesfromDB()&apos;&#x0D;&#x0A;- リファクタリングされた要素の参照を更新" delegate="false" deprecate="false" description="メソッド名 &apos;getChildFrames&apos; を変更します" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.pageDomein.entity{Frame.java[Frame~getChildFrames" name="fetchChildFramesfromDB" references="true" stamp="1715507841058" version="1.0"/>
+</session>

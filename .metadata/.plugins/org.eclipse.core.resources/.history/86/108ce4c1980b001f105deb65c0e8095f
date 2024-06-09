@@ -1,0 +1,10 @@
+package com.example.demo.model;
+
+public class PageModel {
+	
+	@getter
+	@setter
+	private Frame baseFrame;
+	
+	
+}
