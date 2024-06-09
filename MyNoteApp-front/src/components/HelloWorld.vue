@@ -60,6 +60,8 @@ export default {
       { id: "item6", content: "Item 6" },
       { id: "item7", content: "Item 7" },
       { id: "item8", content: "Item 8" },
+      { id: "item9", content: "Item 9" },
+      { id: "item10", content: "Item 10" },
       // 他の要素...
     ]);
     const point = (p) => {
