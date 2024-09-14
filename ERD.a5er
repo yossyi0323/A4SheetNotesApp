@@ -1,0 +1,118 @@
+﻿# A5:ER FORMAT:18
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright © 2007 m.matsubara
+# A5:SQL Mk-2 Version 2.19.1 Copyright © 1997 - 2024 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=MyNoteApp
+Author=後藤喜斗
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=8
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=7
+RDBMSTypeName=PostgreSQL
+CommonField="作成日時","created_at","@DATETIME",,,"","",$FFFFFFFF
+CommonField="更新日時","updated_at","",,,"","",$FFFFFFFF
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=1
+BugFixEntityWidth=1
+
+[Entity]
+PName=t_content
+LName=コンテンツトラン
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=800
+Top=500
+Field="コンテンツID","content_id","@VARCHAR","NOT NULL",0,"","",$FFFFFFFF,""
+Field="コンテンツ区分","content_type","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+Field="本文","body","@VARCHAR",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20240914111837
+Position="MAIN",800,500,389,187
+ZOrder=1
+
+[Entity]
+PName=t_layout_line
+LName=レイアウト線トラン
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=1400
+Top=500
+Field="コンテンツID","content_id","@VARCHAR","NOT NULL",0,"","",$FFFFFFFF,""
+Field="コンテンツ区分","content_type","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+Field="本文","body","@VARCHAR",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20240914133459
+Position="MAIN",1400,500,394,198
+ZOrder=2
+
+[Entity]
+PName=t_frame
+LName=フレームトラン
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=800
+Top=800
+Field="コンテンツID","content_id","@VARCHAR","NOT NULL",0,"","",$FFFFFFFF,""
+Field="コンテンツ区分","content_type","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+Field="本文","body","@VARCHAR",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20240914133636
+Position="MAIN",800,800,389,190
+ZOrder=3
+
+[Entity]
+PName=t_page
+LName=ページトラン
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=1400
+Top=800
+Field="コンテンツID","content_id","@VARCHAR","NOT NULL",0,"","",$FFFFFFFF,""
+Field="コンテンツ区分","content_type","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+Field="本文","body","@VARCHAR",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20240914133711
+Position="MAIN",1400,800,389,188
+ZOrder=4
